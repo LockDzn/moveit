@@ -1,26 +1,23 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { ThemeProvider } from 'styled-components'
 
-function App() {
+import ExperienceBar from './components/ExperinceBar'
+
+import Light from './styles/themes/light'
+import GlobalStyle from './styles/global'
+
+import { Container } from './styles/App'
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <ThemeProvider theme={Light}>
+      <div>
+        <GlobalStyle />
+        <Container>
+          <ExperienceBar />
+        </Container>
+      </div>
+    </ThemeProvider>
+  )
 }
 
-export default App;
+export default App
