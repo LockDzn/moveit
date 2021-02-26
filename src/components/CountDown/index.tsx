@@ -1,10 +1,8 @@
-import { useEffect, useState, useContext } from 'react'
+import { useContext } from 'react'
 
 import { CountdownContext } from '../../contexts/CountdownContext'
 
 import { Contianer, Button, ButtonActive } from './styles'
-
-let countdownTimeout: NodeJS.Timeout
 
 const CountDown = () => {
   const {
